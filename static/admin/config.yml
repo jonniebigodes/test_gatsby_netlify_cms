@@ -1,6 +1,7 @@
 backend:
-  name: test-gatsby-netlify-cms
-  repo: jonniebigodes/test_gatsby_netlify_cms.git
+  #name: github
+  name: test-repo
+  #repo: jonniebigodes/test_gatsby_netlify_cms.git
 
 media_folder: static/assets
 public_folder: assets
@@ -8,7 +9,8 @@ public_folder: assets
 collections:
   - name: posts
     label: Posts
-    folder: "src/pages/posts"
+    #folder: "src/pages/posts"
+    folder: posts
     create: true
     fields:
       - { name: title, label: Title }
