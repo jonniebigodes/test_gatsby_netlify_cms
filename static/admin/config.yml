@@ -10,7 +10,7 @@ collections:
   - name: posts
     label: Posts
     #folder: "src/pages/posts"
-    folder: posts
+    folder: /content/posts
     create: true
     fields:
       - { name: title, label: Title }
