@@ -1,7 +1,7 @@
 backend:
   name: github
   #name: test-repo
-  repo: jonniebigodes/test_gatsby_netlify_cms.git
+  repo: jonniebigodes/test_gatsby_netlify_cms
 
 media_folder: static/assets
 public_folder: assets
