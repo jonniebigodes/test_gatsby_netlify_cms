@@ -1,0 +1,20 @@
+backend:
+  name: test-gatsby-netlify-cms
+  repo: jonniebigodes/test_gatsby_netlify_cms.git
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: posts
+    label: Posts
+    folder: "src/pages/posts"
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: description, label: Description }
+      - { name: "tags", label: "Tags", widget: "list"}
+      - { name: "featuredImage", label: "Featured Image", widget: "image" }
+      - { name: body, label: Body, widget: markdown }
