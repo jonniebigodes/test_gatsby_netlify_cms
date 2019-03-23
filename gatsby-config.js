@@ -21,6 +21,13 @@ module.exports = {
       },
     },
     {
+      resolve:`gatsby-source-filesystem`,
+      options:{
+        path:`${__dirname}/static/assets`,
+        name:`uploads`
+      }
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -36,8 +43,26 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          {
+            resolve:`gatsby-remark-relative-images`,
+            options:{
+              name:`uploads`
+            }
+          },
           `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
+          {
+            resolve:`gatsby-remark-copy-linked-files`,
+            options:{
+              destinationDir:`${__dirname}/static`
+            }
+          },
+          {
+            resolve: `gatsby-plugin-netlify-cms-paths`,
+            options: {
+              // Path to your Netlify CMS config file
+              cmsConfig: `/static/admin/config.yml`
+            }
+          },
           `gatsby-remark-smartypants`,
         ],
       },
