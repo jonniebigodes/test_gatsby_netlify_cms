@@ -9,7 +9,7 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
 
-    const { previous, next } = this.props.pageContext
+    // const { previous, next } = this.props.pageContext
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -33,7 +33,7 @@ class BlogPostTemplate extends React.Component {
                 dangerouslySetInnerHTML={{ __html: post.html }}
               />
               <hr />
-              <ul
+              {/* <ul
                 style={{
                   display: `flex`,
                   flexWrap: `wrap`,
@@ -56,7 +56,7 @@ class BlogPostTemplate extends React.Component {
                     </Link>
                   )}
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
