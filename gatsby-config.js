@@ -7,18 +7,18 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/posts`,
-        name: `posts`,
-      },
-    },
-    {
       resolve:`gatsby-source-filesystem`,
       options:{
         path:`${__dirname}/static/assets`,
         name:`assets`
       }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/posts`,
+        name: `posts`,
+      },
     },
    /*  {
       resolve: `gatsby-plugin-netlify-cms-paths`,
