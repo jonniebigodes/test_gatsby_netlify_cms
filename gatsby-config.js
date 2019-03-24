@@ -7,44 +7,37 @@ module.exports = {
   },
   plugins: [
     {
-      resolve:`gatsby-source-filesystem`,
-      options:{
-        path:`${__dirname}/static/assets`,
-        name:`assets`
-      }
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/posts`,
         name: `posts`,
       },
     },
-    /* {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
-      },
-    }, */
-    
     {
+      resolve:`gatsby-source-filesystem`,
+      options:{
+        path:`${__dirname}/static/assets`,
+        name:`assets`
+      }
+    },
+   /*  {
       resolve: `gatsby-plugin-netlify-cms-paths`,
       options: {
         // Path to your Netlify CMS config file
         cmsConfig: `/static/admin/config.yml`
       }
-    },
+    }, */
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          {
-            resolve:`gatsby-remark-relative-images`,
-            /* options:{
-              name:`assets`
-            } */
-          },
+          `gatsby-remark-relative-images`,
+          /* {
+            resolve: `gatsby-plugin-netlify-cms-paths`,
+            options: {
+              cmsConfig: `/static/admin/config.yml`,
+            },
+          }, */
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -59,17 +52,16 @@ module.exports = {
           },
          
           `gatsby-remark-prismjs`,
-         /*  {
+          {
             resolve:`gatsby-remark-copy-linked-files`,
             options:{
               destinationDir:`${__dirname}/static`
             }
-          }, */
+          },
           {
-            resolve: `gatsby-plugin-netlify-cms-paths`,
-            options: {
-              // Path to your Netlify CMS config file
-              cmsConfig: `/static/admin/config.yml`
+            resolve:`gatsby-remark-copy-linked-files`,
+            options:{
+              destinationDir:`${__dirname}/static`
             }
           },
           `gatsby-remark-smartypants`,
