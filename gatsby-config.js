@@ -7,6 +7,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve:`gatsby-source-filesystem`,
+      options:{
+        path:`${__dirname}/static/assets`,
+        name:`assets`
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/posts`,
@@ -20,13 +27,7 @@ module.exports = {
         name: `assets`,
       },
     }, */
-    {
-      resolve:`gatsby-source-filesystem`,
-      options:{
-        path:`${__dirname}/static/assets`,
-        name:`assets`
-      }
-    },
+    
     {
       resolve: `gatsby-plugin-netlify-cms-paths`,
       options: {
@@ -39,6 +40,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve:`gatsby-remark-relative-images`,
+            /* options:{
+              name:`assets`
+            } */
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1500,
@@ -50,12 +57,7 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          {
-            resolve:`gatsby-remark-relative-images`,
-            options:{
-              name:`uploads`
-            }
-          },
+         
           `gatsby-remark-prismjs`,
          /*  {
             resolve:`gatsby-remark-copy-linked-files`,
@@ -91,7 +93,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    `gatsby-plugin-netlify-cms`
-    /* `gatsby-plugin-netlify` */
+    `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-netlify` 
   ],
 }

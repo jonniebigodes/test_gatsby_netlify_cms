@@ -1,7 +1,7 @@
 ---
 title: Hello World
 date: "2015-05-01T22:12:03.284Z"
-featuredImage: "./golem.jpg"
+featuredImage: golem.jpg
 tags: ["one", "zero", "one"]
 path: "/posts/my-first-post"
 ---
