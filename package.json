@@ -29,7 +29,7 @@
     "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-sharp": "^2.1.17",
     "netlify-cms": "^2.7.0",
-    "prismjs": "^1.15.0",
+    "prismjs": "^1.23.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
